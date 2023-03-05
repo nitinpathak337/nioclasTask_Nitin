@@ -1,38 +1,115 @@
+body {
+  margin: 0px;
+  background-image: linear-gradient(aliceblue, lightblue);
+  min-height: 100vh;
+}
 .App {
   text-align: center;
+  padding: 14px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
+  position: absolute;
+  bottom: 8%;
+  width: 50%;
+  left: 30%;
+}
+
+.list-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 43%;
+  align-items: center;
+  padding-left: 0px;
+}
+
+.heading {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 28px;
+  color: chocolate;
+  font-style: italic;
+}
+
+.question-para {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+  color: darkslateblue;
+  font-weight: 600;
+}
+.chapter {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: right;
+  font-size: 13px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: dimgray;
+}
+.question {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: dimgray;
+  margin-bottom: 15px;
+  text-align: left;
+}
+.loader-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  align-items: center;
 
-.App-link {
-  color: #61dafb;
+  height: 50vh;
 }
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: lightcyan;
+  border: 1px solid black;
+  padding: 4px;
+  border-radius: 6px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  color: black;
+}
+.disabled {
+  opacity: 0.5;
+}
+.active-btn {
+  background-color: lemonchiffon;
+}
+@media (min-width: 768px) {
+  button {
+    padding: 8px;
   }
-  to {
-    transform: rotate(360deg);
+  .App {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  .heading {
+    font-size: 45px;
+  }
+  .question-para {
+    font-size: 23px;
+  }
+  .chapter {
+    font-size: 18px;
+  }
+  .question {
+    font-size: 20px;
+    text-align: left;
+    width: 100%;
+  }
+  .btn-container {
+    width: 38%;
+  }
+  .list-container {
+    width: 18%;
   }
 }
